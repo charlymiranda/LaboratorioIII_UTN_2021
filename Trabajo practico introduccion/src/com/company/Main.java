@@ -1,19 +1,20 @@
 package com.company;
 
-import com.sun.jdi.IntegerValue;
-import jdk.swing.interop.SwingInterOpUtils;
-
-import javax.lang.model.SourceVersion;
+import javax.swing.*;
+import javax.swing.plaf.IconUIResource;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
 
+    private static Scanner sc;
+
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
         int ejercicio = 0;
         char continuar = 's';
+        char control;
         while (continuar == 's') {
 
             System.out.println("Ingrese un ejercicio para realizar del 1 al 18");
@@ -69,20 +70,35 @@ public class Main {
                     problem12();
                     break;
                 case 13:
+                    System.out.println("Problema 13: ");
+                    problem13();
                     break;
                 case 14:
+                    System.out.println("Problema 14: ");
+                    problem14();
                     break;
                 case 15:
+                    System.out.println("Problema 15: ");
+                    problem15();
                     break;
                 case 16:
+                    System.out.println("Problema 16: ");
+                    problem16();
                     break;
                 case 17:
+                    System.out.println("Problema 17: ");
+                    problem17();
                     break;
                 case 18:
+                    System.out.println("Problema 17: ");
+                    problem18();
                     break;
-
-
+                default:
+                    System.out.println("La opcion ingresada no es valida");
             }
+                System.out.println("Desea continuar s/n\n");
+                continuar = scanner.next().charAt(0);
+
         }
     }
     /*EJERCICIO 1*/
@@ -238,8 +254,109 @@ public class Main {
 
     /*Problema 13*/
     public  static void problem13(){
+        Scanner scanner = new Scanner(System.in);
+        double cat1, cat2, hipo;
+        System.out.println("Ingrese el valor para el primer cateto");
+        cat1 = scanner.nextDouble();
+
+        System.out.println("Ingrese el valor para el segundo cateto");
+        cat2 = scanner.nextDouble();
+        hipo = Math.sqrt(Math.pow(cat1, 2) + Math.pow(cat2, 2));
+        System.out.println("La hipotenusa es: " + hipo);
+    }
+
+    /*Problema 14*/
+    public static void problem14(){
+        sc = new Scanner(System.in);
+
+        System.out.println("Ingrese el radio de la esfera.");
+        double radio = sc.nextDouble();
+        double volumen;
+        volumen= (4.0/3) * Math.PI * Math.pow(radio, 3);
+
+        System.out.println("El volumende la esfera es = "+ volumen);
 
     }
+
+    /*Problema 15*/
+    public static void problem15(){
+        sc = new Scanner(System.in);
+        System.out.println("Ingrese Longitud del lado 1");
+        double lado1 = sc.nextDouble();
+        System.out.println("Ingrese Longitud del lado 2");
+        double lado2 = sc.nextDouble();
+        System.out.println("Ingrese Longitud del lado 3");
+        double lado3 = sc.nextDouble();
+
+        double sp = (lado1+lado2+lado3)/2;
+
+        double area = Math.sqrt(sp * (sp -lado1) * (sp - lado2) * (sp - lado3));/*dudas con el sqrt*/
+
+        System.out.println("El area es = " + area);
+
+    }
+
+    /*problema 16*/
+    public static void problem16(){
+        sc = new Scanner(System.in);
+        System.out.println("Ingrese un numero de 3 cifras: ");
+        int n = sc.nextInt();
+
+        String sn = String.valueOf(n);
+        char[] num = sn.toCharArray();
+        int i=0;
+        for(i=0; i<num.length; i++){
+            System.out.println(num[i]);
+        }
+
+
+
+    }
+    /*Problema 17*/
+    public static void problem17(){
+        sc = new Scanner(System.in);
+        System.out.println("Ingrese un numero de 5 cifras: ");
+        int n = sc.nextInt();
+
+        String sn = String.valueOf(n);
+        char[] num = sn.toCharArray();
+        int i=0;
+        for(i=0; i<num.length; i++){
+            if(num[i]%2==0){
+                System.out.println(num[i]);
+            }
+        }
+    }
+
+    /*Problema 18*/
+    public static void problem18(){
+        sc = new Scanner(System.in);
+        System.out.println("Ingrese la hora");
+        int hora = sc.nextInt();
+        System.out.println("Ingrese la hora");
+        int minutos = sc.nextInt();
+        System.out.println("Ingrese la hora");
+        int segundos = sc.nextInt();
+
+        boolean valida = false;
+
+        if(hora >= 0 && hora < 24){
+            if(minutos>=0 && minutos<60){
+                if(segundos>=0 && segundos<60){
+                    valida = true;
+                }
+            }
+        }
+
+        if(valida){
+            System.out.println("La hora es valida ");
+        }else{
+            System.out.println("La hora es invalida");
+        }
+
+
+    }
+
 }
 
 
