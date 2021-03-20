@@ -1,7 +1,5 @@
 package com.company;
 
-import javax.swing.*;
-import javax.swing.plaf.IconUIResource;
 import java.util.Scanner;
 
 public class Main {
@@ -308,10 +306,8 @@ public class Main {
         for(i=0; i<num.length; i++){
             System.out.println(num[i]);
         }
-
-
-
     }
+
     /*Problema 17*/
     public static void problem17(){
         sc = new Scanner(System.in);
@@ -347,14 +343,11 @@ public class Main {
                 }
             }
         }
-
         if(valida){
             System.out.println("La hora es valida ");
         }else{
             System.out.println("La hora es invalida");
         }
-
-
     }
 
 }
