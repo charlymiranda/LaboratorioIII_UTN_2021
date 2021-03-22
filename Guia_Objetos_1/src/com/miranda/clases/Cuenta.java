@@ -41,14 +41,17 @@ public class Cuenta {
     }
 
     public void setNombre(String nombre) {
+
         this.nombre = nombre;
     }
 
     public double getBalance() {
+
         return balance;
     }
 
     public void setBalance(double balance) {
+
         this.balance = balance;
     }
 
