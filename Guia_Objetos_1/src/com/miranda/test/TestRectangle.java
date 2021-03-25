@@ -2,12 +2,16 @@ package com.miranda.test;
 
 import com.miranda.clases.Rectangle;
 
+import java.io.PrintStream;
+
 public class TestRectangle {
     public static void main(String[] args) {
 
         Rectangle rc = new Rectangle(5.2, 4.8);
         String rec = rc.toString();
         System.out.println(rec);
+
+        PrintStream muestro = System.out;// para mostrar por pantalla
 
         double area = rc.calculateArea();
         System.out.println("the area is: " + area);
