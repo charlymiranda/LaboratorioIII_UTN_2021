@@ -1,8 +1,7 @@
 package com.miranda.ejercicio1;
 
-import java.awt.*;
 
-public class Circulo {
+public class Circulo{
     private double radio = 1.0;
     private  String color= "rojo";
    // private Color color = Color.red;

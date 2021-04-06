@@ -12,10 +12,14 @@ public class TestEjercicio2 {
                 2021,3200, "COsas de pescados");
 
 
-        Staff staff1 = new Staff("50524553", "Stefi", "ramirez", "@mail.com", "Direccion", 250000, "noche");
-        Staff staff2 = new Staff("1552545", "pedro", "ramos", "@mail.com", "Direccion", 25326, "noche");
-        Staff staff3 = new Staff("6564325", "Roman", "ramas", "@mail.com", "Direccion", 2500, "noche");
-        Staff staff4 = new Staff("78546252", "ingrid", "ramir", "@mail.com", "Direccion", 75000, "noche");
+        Staff staff1 = new Staff("50524553", "Stefi", "ramirez", "@mail.com",
+                "Direccion", 250000, "noche");
+        Staff staff2 = new Staff("1552545", "pedro", "ramos", "@mail.com",
+                "Direccion", 25326, "noche");
+        Staff staff3 = new Staff("6564325", "Roman", "ramas", "@mail.com",
+                "Direccion", 2500, "noche");
+        Staff staff4 = new Staff("78546252", "ingrid", "ramir", "@mail.com",
+                "Direccion", 75000, "noche");
 
 
         Persona[] personas = new Persona[]{alumno1,alumno2,alumno3,alumno4,staff1,staff2,staff3,staff4};
