@@ -19,6 +19,10 @@ public abstract class Figura {
         this.color = color;
     }
 
+    public abstract double getArea();
+    public abstract double getPerimetro();
+
+
     @Override
     public String toString() {
         return "Figura{" +

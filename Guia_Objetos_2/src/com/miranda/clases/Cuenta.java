@@ -33,6 +33,11 @@ public class Cuenta {
         }
     }
 
+    public void extractRegister(){
+
+
+    }
+
     public void deposit(double depositing){
         this.balance += depositing;
     }

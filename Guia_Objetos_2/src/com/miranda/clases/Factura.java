@@ -6,29 +6,28 @@ import java.util.Arrays;
 import java.util.UUID;
 
 public class Factura {
-    private UUID uuId;
+    private String uuId;
     private double totalCost;
     private LocalDateTime date;
     private Cliente cliente;
     private ItemVenta[] items;
 
     public Factura() {
-
     }
 
     public Factura(Cliente cliente, ItemVenta[] items) {
-        this.uuId = UUID.randomUUID();
+        this.uuId = UUID.randomUUID().toString().substring(0, 10);
         this.date = LocalDateTime.now();
         this.cliente = cliente;
         this.items = items;
     }
 
 
-    public UUID getUuId() {
+    public String getUuId() {
         return uuId;
     }
 
-    public void setUuId(UUID uuId) {
+    public void setUuId(String uuId) {
         this.uuId = uuId;
     }
 

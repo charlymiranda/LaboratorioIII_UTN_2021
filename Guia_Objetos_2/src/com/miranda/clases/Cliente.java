@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Cliente {
 
-    private UUID uuId;
+    private String uuId;
     private String name;
     private String email;
     private double discount;
@@ -13,17 +13,17 @@ public class Cliente {
     }
 
     public Cliente(String name, String email, double discount) {
-        this.uuId = UUID.randomUUID();
+        this.uuId = UUID.randomUUID().toString().substring(0, 10);
         this.name = name;
         this.email = email;
         this.discount = discount;
     }
 
-    public UUID getUuId() {
+    public String getUuId() {
         return uuId;
     }
 
-    public void setUuId(UUID uuId) {
+    public void setUuId(String uuId) {
         this.uuId = uuId;
     }
 

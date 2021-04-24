@@ -39,11 +39,11 @@ public class Circulo{
         return Math.PI * Math.pow(this.radio, 2.0);
     }
 
-
     @Override
     public String toString() {
         return "Circulo{" +
                 "radio=" + radio +
+                " area: " + calcularArea() +
                 ", color='" + color + '\'' +
                 '}';
     }

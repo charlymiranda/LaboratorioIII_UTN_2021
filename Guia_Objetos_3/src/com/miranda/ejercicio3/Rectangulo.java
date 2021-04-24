@@ -8,6 +8,16 @@ public class Rectangulo extends Figura{
 
     }
 
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public double getPerimetro() {
+        return 2 * (this.ancho + this.alto);
+    }
+
     public Rectangulo(double ancho, double alto){
         this.alto=alto;
         this.ancho=ancho;
@@ -18,10 +28,6 @@ public class Rectangulo extends Figura{
         super(color);
         this.alto=alto;
         this.ancho=ancho;
-    }
-
-    public double perimetro(){
-        return 2 * (this.ancho + this.alto);
     }
 
     public double getAlto(){

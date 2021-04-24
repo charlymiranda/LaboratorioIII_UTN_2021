@@ -3,7 +3,7 @@ package com.miranda.clases;
 import java.util.UUID;
 
 public class ItemVenta {
-    private UUID uuId;
+    private String uuId;
     private String name;
     private String description;
     private double unitPrice;
@@ -12,18 +12,18 @@ public class ItemVenta {
     }
 
     public ItemVenta(String name, String description, double unitPrice) {
-        this.uuId = UUID.randomUUID();
+        this.uuId = UUID.randomUUID().toString().substring(0, 10);
         this.name = name;
         this.description = description;
         this.unitPrice = unitPrice;
     }
 
 
-    public UUID getUuId() {
+    public String getUuId() {
         return uuId;
     }
 
-    public void setUuId(UUID uuId) {
+    public void setUuId(String uuId) {
         this.uuId = uuId;
     }
 
